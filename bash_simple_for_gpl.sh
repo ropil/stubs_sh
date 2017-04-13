@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # {one line to give the program's name and a brief idea of what it does.}
-# Copyright (C) {year}  {name of author}
+# Copyright (C) 2017  Robert Pilstål
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ if [ $# -lt ${NUMREQUIRED} ]; then
   echo "  # Run on three files";
   echo "  $0 file1 file2 file3 > output.txt";
   echo "";
-  echo "{project}  Copyright (C) {year}  {fullname};"
+  echo "{project}  Copyright (C) 2017  Robert Pilstål;"
   echo "This program comes with ABSOLUTELY NO WARRANTY.";
   echo "This is free software, and you are welcome to redistribute it";
   echo "under certain conditions; see supplied General Public License.";
