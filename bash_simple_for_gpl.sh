@@ -26,15 +26,18 @@ let LISTSTART=${NUMSETTINGS}+1;
 
 # I/O-check and help text
 if [ $# -lt ${NUMREQUIRED} ]; then
-  echo "USAGE: $0 <opt1> <target1> [<target2> [...]]";
+  echo "USAGE: [ENV1=value] $0 <opt1> <target1> [<target2> [...]]";
   echo "";
   echo " OPTIONS:";
   echo "  opt1 - description...               ... no longer than this!";
   echo "  target2 - description...            ... no longer than this!";
   echo "";
+  echo " ENVIRONMENT:";
+  echo "  ENV1 - description...               ... no longer than this!";
+  echo "";
   echo " EXAMPLES:";
-  echo "  # Run on three files";
-  echo "  $0 file1 file2 file3 > output.txt";
+  echo "  # Run on three files, with ENV1=1";
+  echo "  ENV1=1 $0 file1 file2 file3 > output.txt";
   echo "";
   echo "{project}  Copyright (C) 2017  Robert Pilstål;"
   echo "This program comes with ABSOLUTELY NO WARRANTY.";
@@ -46,6 +49,11 @@ fi;
 # Parse settings
 opt1=$1;
 targetlist=${@:$LISTSTART};
+
+# Set default values
+if [ -z ${ENV1} ]; then
+  ENV1=default;
+fi
 
 # Loop over arguments
 for target in ${targetlist}; do
