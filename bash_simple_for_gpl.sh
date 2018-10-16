@@ -39,7 +39,7 @@ if [ $# -lt ${NUMREQUIRED} ]; then
   echo "  # Run on three files, with ENV1=1";
   echo "  ENV1=1 $0 file1 file2 file3 > output.txt";
   echo "";
-  echo "{project}  Copyright (C) 2018  Robert Pilstål;"
+  echo "$(basename $0 .sh)  Copyright (C) 2018  Robert Pilstål;"
   echo "This program comes with ABSOLUTELY NO WARRANTY.";
   echo "This is free software, and you are welcome to redistribute it";
   echo "under certain conditions; see supplied General Public License.";
