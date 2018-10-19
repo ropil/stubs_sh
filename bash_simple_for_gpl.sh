@@ -24,9 +24,14 @@ let NUMREQUIRED=${NUMSETTINGS}+1;
 # Start of list
 let LISTSTART=${NUMSETTINGS}+1;
 
+# Set default values
+if [ -z ${ENV1} ]; then
+  ENV1=default;
+fi
+
 # I/O-check and help text
 if [ $# -lt ${NUMREQUIRED} ]; then
-  echo "USAGE: [ENV1=value] $0 <opt1> <target1> [<target2> [...]]";
+  echo "USAGE: [ENV1=${ENV1}] $0 <opt1> <target1> [<target2> [...]]";
   echo "";
   echo " OPTIONS:";
   echo "  opt1 - description...               ... no longer than this!";
@@ -49,11 +54,6 @@ fi;
 # Parse settings
 opt1=$1;
 targetlist=${@:$LISTSTART};
-
-# Set default values
-if [ -z ${ENV1} ]; then
-  ENV1=default;
-fi
 
 # Loop over arguments
 for target in ${targetlist}; do
