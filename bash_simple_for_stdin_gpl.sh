@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # {one line to give the program's name and a brief idea of what it does.}
-# Copyright (C) 2018  Robert Pilstål
+# Copyright (C) 2017-2019  Robert Pilstål
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -64,7 +64,7 @@ if [ ${#targetlist[@]} -lt 2 ] && [ "x${targetlist}" = "x" ]; then
   echo "  # Run on three files, with ENV1=1";
   echo "  ENV1=1 $0 file1 file2 file3 > output.txt";
   echo "";
-  echo "$(basename $0 .sh)  Copyright (C) 2018  Robert Pilstål;"
+  echo "$(basename $0 .sh)  Copyright (C) 2017-2019  Robert Pilstål;"
   echo "This program comes with ABSOLUTELY NO WARRANTY.";
   echo "This is free software, and you are welcome to redistribute it";
   echo "under certain conditions; see supplied General Public License.";
